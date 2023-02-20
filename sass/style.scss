@@ -35,6 +35,9 @@ section {
         list-style: none;
         counter-reset: item;
         margin-top: 24px;
+        @media screen and (max-width: 766px) {
+            padding: 0;
+        }
         li {
             &::before {
                 margin-right: 10px;
@@ -54,10 +57,18 @@ section {
                 font-weight: 700;
                 position: absolute;
                 left: 25px;
+                @media screen and (max-width: 766px) {
+                    left: -16px;
+                    top: -20px;
+                }
             }
+            position: relative;
             counter-increment: item;
             margin-bottom: 16px;
             padding: 8px 16px;
+            @media screen and (max-width:766px) {
+                padding: 8px 20px;
+            }
             &:nth-child(odd) {
                 background: #145f99;
                 .jam {
@@ -84,6 +95,9 @@ section {
                 display: inline-block;
                 width: 70%;
                 color: white;
+                @media screen and (max-width: 766px) {
+                    width: 50%;
+                }
             }
             &-right {
                 // display: inline-block;
@@ -93,6 +107,10 @@ section {
                 top: -16px;
                 width: 200px;
                 height: 100px;
+                @media screen and (max-width: 766px) {
+                    width: 150px;
+                    right: -16px;
+                }
                 img {
                     width: 100%;
                     height: 100%;
