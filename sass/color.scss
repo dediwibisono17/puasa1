@@ -1,6 +1,7 @@
 $kuning: #fcca67;
 $biru: #005296;
 $hijau: #6ebf52;
+$birumuda: #0695b4;
 .bg {
     &-yellow {
         background: $kuning;
@@ -10,5 +11,8 @@ $hijau: #6ebf52;
     }
     &-green {
         background: $hijau;
+    }
+    &-birumuda {
+        background: $birumuda;
     }
 }
