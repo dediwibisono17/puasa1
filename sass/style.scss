@@ -17,15 +17,39 @@ section {
 .puasa {
     h3 {
         font-size: 2.7rem;
+        @media screen and (max-width:766px) {
+            font-size: 1.4rem;
+        }
+        &.smals {
+            font-size: 1.9rem;
+            @media screen and (max-width:766px) {
+                font-size: 1rem;
+            }
+        }
     }
+
     .block-blue {
         background: #145f99;
         color: white;
         box-shadow: 2px 2px 3px black;
         width: fit-content;
-        padding: 16px;
+        padding: 16px 16px 16px 52px;
         margin: 0 auto 24px;
         transform: skew(0deg, -2deg);
+        position: relative;
+        .left {
+            position: absolute;
+            left: -32px;
+            top: -32px;
+            width: 80px;
+            height: auto;
+            transform: skew(0deg, 2deg);
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
         h3 {
             transform: skew(0deg, 2deg);
             font-family: 'Unbounded';
@@ -56,7 +80,8 @@ section {
                 // top: 0px;
                 font-weight: 700;
                 position: absolute;
-                left: 25px;
+                left: -25px;
+                top: -8px;
                 @media screen and (max-width: 766px) {
                     left: -16px;
                     top: -20px;
@@ -69,20 +94,28 @@ section {
             @media screen and (max-width:766px) {
                 padding: 8px 20px;
             }
+            .jam {
+                @media screen and (max-width:766px) {
+                    font-size: 1.2rem !important;
+                }
+            }
             &:nth-child(odd) {
                 background: #145f99;
                 .jam {
                     color: #e8b740;
                     font-weight: bold;
-                    font-size: 1.5rem;
+                    font-size: 1.2rem;
                 }
             }
             &:nth-child(even) {
                 background: #fcb23d;
+                .side-left {
+                    color: black;
+                }
                 .jam {
                     color: #145f99;
                     font-weight: bold;
-                    font-size: 1.5rem;
+                    font-size: 1.2rem;
                 }
             }
         }
@@ -94,9 +127,27 @@ section {
             &-left {
                 display: inline-block;
                 width: 70%;
+                font-weight: 600;
                 color: white;
                 @media screen and (max-width: 766px) {
                     width: 50%;
+                }
+                .country {
+                    font-size: 1.5rem;
+                    line-height: 1.5rem;
+                    margin-bottom: 8px;
+                    @media screen and (max-width:766px) {
+                        font-size: 1rem;
+                        line-height: 1rem;
+                    }
+                }
+                h4 {
+                    margin-bottom: 0;
+                    font-weight: 600;
+                    font-size: 1.2rem;
+                    @media screen and (max-width:766px) {
+                        font-size: 1rem;
+                    }
                 }
             }
             &-right {
@@ -106,9 +157,10 @@ section {
                 right: 0;
                 top: -16px;
                 width: 200px;
+                transform: rotate(-3deg);
                 height: 100px;
                 @media screen and (max-width: 766px) {
-                    width: 150px;
+                    width: 100px;
                     right: -16px;
                 }
                 img {
