@@ -1,6 +1,10 @@
 $kuning: #fcca67;
+$biru: #005296;
 .bg {
     &-yellow {
         background: $kuning;
+    }
+    &-blue {
+        background: $biru;
     }
 }

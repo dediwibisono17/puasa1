@@ -13,9 +13,31 @@ h3 {
 section {
     padding: 32px 0;
 }
-
-.puasa {
+.block-blue {
+    background: #145f99;
+    color: white;
+    box-shadow: 2px 2px 3px black;
+    width: fit-content;
+    padding: 16px 16px 16px 52px;
+    margin: 0 auto 24px;
+    transform: skew(0deg, -2deg);
+    position: relative;
+    .left {
+        position: absolute;
+        left: -32px;
+        top: -32px;
+        width: 80px;
+        height: auto;
+        transform: skew(0deg, 2deg);
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
     h3 {
+        transform: skew(0deg, 2deg);
+        font-family: 'Unbounded';
         font-size: 2.7rem;
         @media screen and (max-width:766px) {
             font-size: 1.4rem;
@@ -27,34 +49,25 @@ section {
             }
         }
     }
-
-    .block-blue {
-        background: #145f99;
-        color: white;
-        box-shadow: 2px 2px 3px black;
-        width: fit-content;
-        padding: 16px 16px 16px 52px;
-        margin: 0 auto 24px;
-        transform: skew(0deg, -2deg);
-        position: relative;
-        .left {
-            position: absolute;
-            left: -32px;
-            top: -32px;
-            width: 80px;
-            height: auto;
-            transform: skew(0deg, 2deg);
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-        }
-        h3 {
-            transform: skew(0deg, 2deg);
-            font-family: 'Unbounded';
+}
+.puasa {
+    position: relative;
+    .kotak {
+        position: absolute;
+        left: 0;
+        right: 0;
+        opacity: .2;
+        top: 0;
+        filter: grayscale(1);
+        bottom: 0;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     }
+
+    
     ol {
         list-style: none;
         counter-reset: item;
@@ -91,6 +104,7 @@ section {
             counter-increment: item;
             margin-bottom: 16px;
             padding: 8px 16px;
+            border-top: 3px solid white;
             @media screen and (max-width:766px) {
                 padding: 8px 20px;
             }
@@ -170,5 +184,21 @@ section {
                 }
             }
         }
+    }
+}
+
+.manfaatx {
+    .images {
+        width: 320px;
+        margin: 0 auto;
+        display: block;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    .block-blue {
+        padding: 16px ;
     }
 }
